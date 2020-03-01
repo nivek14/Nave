@@ -51,7 +51,15 @@ Tanto o **Robo 3t** como o **insomnia** foram utilizados como recursos para uma 
 
 Comentários mais detalhados da implementação se encontram no projeto do exercío.
 
+## (BONUS) Exercício de Banco de Dados
 
+Neste exercíco foi utilizado o banco de dados **mongoDB**,também foi usado o **nodejs**, o projeto conta com um arquivo **.js** onde são realizadas as tarefas necessárias. O código possui alguns comentários contendo explicaçoes de partes mais importantes do programa.
+
+Para executar basta usar o seguinte comando no console:
+
+ -  **$ node index.js**
+ 
+ Ao executar, será feito o print das tarefas requisitadas.
 
 
 
