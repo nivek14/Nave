@@ -169,6 +169,6 @@ mongo.connect(url, function(err, db) {
    não consegui obter o resultado. 
    
    Como mencionado, usei um conjunto de dados que criei para testes, logo,
-   foi os dados foram adicionados de forma direta no banco de dados.
+   os dados foram adicionados de forma direta no banco de dados.
    
    */ 
