@@ -12,6 +12,7 @@ str2 = prompt('Segunda String: ');
 console.log(str1);
 console.log(str2);
 
+// função com os três argumentos, uma função e duas strings
 Resultado(MaiorString,str1,str2);
 
 //================================================
@@ -34,6 +35,7 @@ function MaiorString(word1,word2){
 
 }
 
+// função que irá chamar a outra função que será aplicada nas strings
 function Resultado(fun,str1,str2){
 
     var maior = fun(str1,str2);
@@ -42,5 +44,3 @@ function Resultado(fun,str1,str2){
 
 }
 
-
-/* OBS: ESCREVER AQUI EXPLICANDO ESSE CÓDIGO*/

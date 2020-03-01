@@ -1,7 +1,6 @@
 // importando bibliotecas
 const express = require('express');
 const mongoose = require('mongoose');
-//const requireDir = require('require-dir');
 
 // Sets necessários para que o mongoose funcione 
 mongoose.set('useNewUrlParser', true);

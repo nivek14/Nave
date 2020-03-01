@@ -4,7 +4,7 @@ const url = 'mongodb://localhost:27017';
 // criando banco de dados
 mongo.connect(url, function(err, db) {
   if (err) throw err;
-  console.log("Database created...");
+  console.log("Banco de dados criado...");
   console.log('\n');
   db.close();
 });
@@ -12,11 +12,11 @@ mongo.connect(url, function(err, db) {
 
 // ========================  criando e populando tabelas ========================
 
-// inserindo os dados nas tabelas
+// inserindo os dados na posts
 mongo.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db("nave_db");
-    // inserindo dados na tabela de posts
+    //  dados da tabela de posts
     var myobj =[
             {
                 id: 1,
@@ -42,7 +42,7 @@ mongo.connect(url, function(err, db) {
     ];
     dbo.collection("posts").insertMany(myobj, function(err, res) {
         if (err) throw err;
-        console.log("Number of documents inserted: " + res.insertedCount);
+        console.log("Número de elementos inseridos" + res.insertedCount);
         console.log('\n');
         db.close();
     });
@@ -52,7 +52,7 @@ mongo.connect(url, function(err, db) {
 mongo.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db("nave_db");
-    // inserindo dados na tabela de comments
+    //  dados da tabela de comments
     var myobj =[
 
         {
@@ -100,7 +100,7 @@ mongo.connect(url, function(err, db) {
     ];
     dbo.collection("comments").insertMany(myobj, function(err, res) {
         if (err) throw err;
-        console.log("Number of documents inserted: " + res.insertedCount);
+        console.log("Número de elementos inseridos: " + res.insertedCount);
         console.log('\n');
         db.close();
       });
@@ -123,7 +123,7 @@ mongo.connect(url, function(err, db) {
                 from: 'comments',
                 localField: 'id',
                 foreignField: 'postId',
-                as: 'nave'
+                as: 'comment'
             }
         }]).toArray(function(err, res) {
 
@@ -154,8 +154,21 @@ mongo.connect(url, function(err, db) {
             console.log(resp.sort(function(a,b){
                 return a.title < b.title ? -1 : a.title > b.title ? 1 : 0;
             }));
-            
+
             db.close();
         });
 });
 
+/* OBS: O único exercício não realizado de todos que foram propostos foi
+   o de indicar o número de comentários de cada post, da forma que fiz
+   com o join, é criado um grande array com todos os dados que usei para
+   os testes, este array é um array de objetos, um dos objetos internos é
+   outro vetor que chamei de comment, este vetor possui todos os cometários
+   referentes ao post correto. Não consegui pegar o tamanho desse vetor interno,
+   tentei usar o .length, mas não funcionou, tentei de outras formas e também
+   não consegui obter o resultado. 
+   
+   Como mencionado, usei um conjunto de dados que criei para testes, logo,
+   foi os dados foram adicionados de forma direta no banco de dados.
+   
+   */ 
