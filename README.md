@@ -45,11 +45,11 @@ O **Docker** serviu para rodar a imagem do **mongoDB**, assim não foi necessár
  -  **$ docker run –name mongodb  -p 27017:27017** (configurar o mongoDB no docker)
  -  **$$ docker start mongo** (start vai depender do nome que foi dado a imagem, no caso como exemplo deixei mongo)
 
-Para verificar se o mongoDB está funcionando corretamente rodando diretamente, basta acessar em uma aba de algum navegador por **localhost:27017**, deve aparecer uma mensagem padão.
+Para verificar se o mongoDB está funcionando corretamente rodando diretamente, basta acessar em uma aba de algum navegador por **localhost:27017**, deve aparecer uma mensagem padrão.
 
 Tanto o **Robo 3t** como o **insomnia** foram utilizados como recursos para uma visualização mais clara de que os dados estavam sendo inseridos no banco de dados, quanto se os **POSTS** E **GETS** estavam funcinando. Para testar a api, seria recomendado o uso das duas ferramentas, pois com elas será possível ver o funcionamento da api.
 
-Comentários mais detalhados da implementação se encontram no projeto do exercío.
+Comentários mais detalhados da implementação se encontram no projeto do exercício.
 
 ## (BONUS) Exercício de Banco de Dados
 
